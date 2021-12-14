@@ -17,3 +17,12 @@ leftpaddle.color("white")
 leftpaddle.shapesize(stretch_wid=5, stretch_len=1)
 leftpaddle.penup()
 leftpaddle.goto(-350, 0)
+
+# create right paddle
+rightpaddle = t.Turtle()
+rightpaddle.speed(0)
+rightpaddle.shape("square")
+rightpaddle.color("white")
+rightpaddle.shapesize(stretch_wid=5, stretch_len=1)
+rightpaddle.penup()
+rightpaddle.goto(350, 0)
