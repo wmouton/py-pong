@@ -37,4 +37,11 @@ ball.goto(5, 5)
 ballxdirection = 0.2
 ballydirection = 0.2
 
-
+# create pen for scorecard update
+pen = t.Turtle()
+pen.speed(0)
+pen.color("Blue")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+pen.write("score", align="center", font=('Arial', 24, 'normal'))
