@@ -26,3 +26,15 @@ rightpaddle.color("white")
 rightpaddle.shapesize(stretch_wid=5, stretch_len=1)
 rightpaddle.penup()
 rightpaddle.goto(350, 0)
+
+# create ball
+ball = t.Turtle()
+ball.speed(0)
+ball.shape("circle")
+ball.color("red")
+ball.penup()
+ball.goto(5, 5)
+ballxdirection = 0.2
+ballydirection = 0.2
+
+
