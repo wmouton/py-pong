@@ -10,22 +10,22 @@ window.setup(width=800, height=600)
 window.tracer(0)
 
 # create left paddle
-leftpaddle = t.Turtle()
-leftpaddle.speed(0)
-leftpaddle.shape("square")
-leftpaddle.color("white")
-leftpaddle.shapesize(stretch_wid=5, stretch_len=1)
-leftpaddle.penup()
-leftpaddle.goto(-350, 0)
+left_paddle = t.Turtle()
+left_paddle.speed(0)
+left_paddle.shape("square")
+left_paddle.color("white")
+left_paddle.shapesize(stretch_wid=5, stretch_len=1)
+left_paddle.penup()
+left_paddle.goto(-350, 0)
 
 # create right paddle
-rightpaddle = t.Turtle()
-rightpaddle.speed(0)
-rightpaddle.shape("square")
-rightpaddle.color("white")
-rightpaddle.shapesize(stretch_wid=5, stretch_len=1)
-rightpaddle.penup()
-rightpaddle.goto(350, 0)
+right_paddle = t.Turtle()
+right_paddle.speed(0)
+right_paddle.shape("square")
+right_paddle.color("white")
+right_paddle.shapesize(stretch_wid=5, stretch_len=1)
+right_paddle.penup()
+right_paddle.goto(350, 0)
 
 # create ball
 ball = t.Turtle()
@@ -34,8 +34,8 @@ ball.shape("circle")
 ball.color("red")
 ball.penup()
 ball.goto(5, 5)
-ballxdirection = 0.2
-ballydirection = 0.2
+ball_x_direction = 0.2
+ball_y_direction = 0.2
 
 # create pen for scorecard update
 pen = t.Turtle()
@@ -45,3 +45,10 @@ pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
 pen.write("score", align="center", font=('Arial', 24, 'normal'))
+
+
+# moving the left paddle
+def left_paddle_up():
+    y = left_paddle.ycor()
+    y = y + 90
+    left_paddle.sety(y)
