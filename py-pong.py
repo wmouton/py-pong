@@ -52,3 +52,9 @@ def left_paddle_up():
     y = left_paddle.ycor()
     y = y + 90
     left_paddle.sety(y)
+
+
+def left_paddle_down():
+    y = left_paddle.ycor()
+    y = y - 90
+    left_paddle.sety(y)
