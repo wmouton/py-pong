@@ -86,3 +86,11 @@ while True:
     # moving the ball
     ball.setx(ball.xcor() + ball_x_direction)
     ball.sety(ball.ycor() + ball_y_direction)
+
+    # set up border
+    if ball.ycor() > 290:
+        ball.sety(290)
+        ball_y_direction = ball_y_direction * -1
+    if ball.ycor() > -290:
+        ball.sety(-290)
+        ball_y_direction = ball_y_direction * -1
