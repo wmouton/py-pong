@@ -71,3 +71,14 @@ def right_paddle_down():
     y = right_paddle.ycor()
     y = y - 90
     right_paddle.sety(y)
+
+
+# assign keys to play
+window.listen()
+window.onkeypress(left_paddle_up, 'w')
+window.onkeypress(left_paddle_down, 's')
+window.onkeypress(right_paddle_up, 'Up')
+window.onkeypress(right_paddle_down, 'Down')
+
+while True:
+    window.update()
